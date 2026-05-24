@@ -18,6 +18,7 @@ const newGameButton = document.getElementById("new-game");
 const resetButton = document.getElementById("reset");
 const hintButton = document.getElementById("hint");
 const checkButton = document.getElementById("check");
+const rulesButton = document.getElementById("rules");
 const solutionButton = document.getElementById("solution");
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
@@ -390,6 +391,21 @@ function revealSolution() {
   );
 }
 
+function showRules() {
+  showMessage(
+    "Game Rules",
+    [
+      "Fill every empty cell with a number from 1 to 9.",
+      "Each row must contain the numbers 1 to 9 once.",
+      "Each column must contain the numbers 1 to 9 once.",
+      "Each 3x3 box must contain the numbers 1 to 9 once.",
+      "Tap a cell, then tap a number to enter it.",
+      "Original numbers are locked. Hint numbers are also locked.",
+      `Wrong entries count as mistakes. You can make up to ${MAX_MISTAKES} mistakes.`
+    ].join("\n")
+  );
+}
+
 function endGame(title, message, options = {}) {
   gameEnded = true;
   stopTimer();
@@ -477,6 +493,7 @@ newGameButton.addEventListener("click", startNewGame);
 resetButton.addEventListener("click", resetGame);
 hintButton.addEventListener("click", giveHint);
 checkButton.addEventListener("click", checkBoard);
+rulesButton.addEventListener("click", showRules);
 solutionButton.addEventListener("click", revealSolution);
 difficultySelect.addEventListener("change", startNewGame);
 modal.addEventListener("click", (event) => {

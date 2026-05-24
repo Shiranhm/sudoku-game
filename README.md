@@ -9,8 +9,9 @@ SUDOKU MASTER is a polished, mobile-first Sudoku web game built with HTML, CSS, 
 - Five difficulty levels
 - Timer and mistake counter
 - Maximum of 50 mistakes
-- New Game, Reset, Hint, Check, and Solution controls
+- New Game, Reset, Hint, Check, Game Rules, and Solution controls
 - Custom modal messages and solution confirmation
+- Built-in rules modal explaining how to play
 - Locked original clues, editable player cells, and locked hint cells
 - Row, column, 3x3 box, selected cell, and matching number highlights
 - Wrong entries shown in red

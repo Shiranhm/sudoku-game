@@ -82,9 +82,13 @@ button:disabled {
   top: 0;
   right: 4px;
   margin: 0;
-  color: rgba(23, 32, 51, 0.78);
+  padding: 4px 8px;
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(23, 32, 51, 0.94);
+  box-shadow: 0 6px 14px rgba(23, 32, 51, 0.2);
   font-size: 0.58rem;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.04em;
 }
 
@@ -166,6 +170,7 @@ select {
   aspect-ratio: 1;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   overflow: hidden;
   border: 3px solid var(--line-bold);
   border-radius: 14px;
@@ -177,7 +182,7 @@ select {
   min-width: 0;
   min-height: 0;
   width: 100%;
-  aspect-ratio: 1;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -283,6 +288,12 @@ select {
 .controls .danger-action {
   grid-column: 1 / -1;
   background: linear-gradient(180deg, #ff7662, var(--danger-dark));
+}
+
+.controls .rules-action {
+  grid-column: 1 / -1;
+  color: var(--ink);
+  background: linear-gradient(180deg, #fff6bf, #ffd45b);
 }
 
 button:not(:disabled):hover,
