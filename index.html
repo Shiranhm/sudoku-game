@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUDOKU MASTER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="game-card" aria-labelledby="game-title">
+      <header class="game-header">
+        <p class="tiny-credit">shiranh</p>
+        <h1 id="game-title">SUDOKU MASTER</h1>
+      </header>
+
+      <section class="difficulty-panel" aria-label="Difficulty selector">
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty" aria-label="Choose difficulty level">
+          <option value="easy">EASY</option>
+          <option value="medium">MEDIUM</option>
+          <option value="hard">HARD</option>
+          <option value="expert">EXPERT</option>
+          <option value="master">MASTER</option>
+        </select>
+      </section>
+
+      <section class="status-bar" aria-label="Game status">
+        <div class="status-pill">
+          <span>Time</span>
+          <strong id="timer">00:00</strong>
+        </div>
+        <div class="status-pill">
+          <span>Level</span>
+          <strong id="current-difficulty">EASY</strong>
+        </div>
+        <div class="status-pill mistake-pill">
+          <span>Mistakes</span>
+          <strong id="mistakes">0 / 3</strong>
+        </div>
+      </section>
+
+      <section class="board-wrap" aria-label="Sudoku board">
+        <div id="sudoku-board" class="sudoku-board" role="grid" aria-label="9 by 9 Sudoku board"></div>
+      </section>
+
+      <section id="number-pad" class="number-pad" aria-label="Number pad"></section>
+
+      <section class="controls" aria-label="Game controls">
+        <button id="new-game" type="button">NEW GAME</button>
+        <button id="reset" type="button">RESET</button>
+        <button id="hint" type="button">HINT</button>
+        <button id="check" type="button">CHECK</button>
+        <button id="solution" class="danger-action" type="button">SOLUTION</button>
+      </section>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message">
+      <h2 id="modal-title">Message</h2>
+      <p id="modal-message"></p>
+      <div id="modal-actions" class="modal-actions"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
